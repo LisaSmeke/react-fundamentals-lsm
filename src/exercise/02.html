@@ -28,11 +28,20 @@
     // const root = ReactDOM.createRoot(rootElement)
     // root.render(myElement)
 
-    ////MY FINAL SOLUTION:
-    const element = React.createElement('div', {
-      className: 'container',
-      children: 'Hello World',
-    })
+    ////MY FINAL SOLUTION WITH EXTRA CREDIT:
+    const helloElement = React.createElement('span', {}, 'Hello')
+    const worldElement = React.createElement('span', {}, 'World')
+
+    const element = React.createElement(
+      'div',
+      {
+        className: 'container',
+      },
+      helloElement,
+      ' ',
+      worldElement,
+    )
+    console.log(element)
     //NOTE! ReactDOM.render is no longer supported, better use ReactDOM.createRoot
     // ReactDOM.render(element, rootElement)
     const root = ReactDOM.createRoot(rootElement)
